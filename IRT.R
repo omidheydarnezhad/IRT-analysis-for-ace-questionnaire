@@ -35,6 +35,11 @@ describe(irt_items)
 tetra <- tetrachoric(irt_items)
 cor_matrix <- tetra$rho
 
+# تحلیل موازی برای EFA
+fa.parallel(tetra$rho,
+            n.obs = nrow(irt_items),
+            fa = "fa",
+            fm = "minres")
 # -----------------------------
 #  تحلیل عاملی یک‌عاملی
 # -----------------------------
