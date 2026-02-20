@@ -40,6 +40,14 @@ fa.parallel(tetra$rho,
             n.obs = nrow(irt_items),
             fa = "fa",
             fm = "minres")
+
+# محاسبه omega با ساختار سه عامل
+omega_res <- omega(tetra$rho,
+                   nfactors = 3,
+                   n.obs = nrow(items),
+                   fm = "minres")
+
+omega_res
 # -----------------------------
 #  تحلیل عاملی یک‌عاملی
 # -----------------------------
